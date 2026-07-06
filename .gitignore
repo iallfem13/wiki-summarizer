@@ -4,4 +4,5 @@ laravel/vendor/
 python-service/__pycache__/
 python-service/.venv/
 python-service/.env/
-Docs/*.md
+Docs/Prompt_1.md
+Docs/Prompt_2.md
