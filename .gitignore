@@ -1,8 +1,12 @@
 .env
 laravel/.env
 laravel/vendor/
+laravel/.DS_store
 python-service/__pycache__/
 python-service/.venv/
 python-service/.env/
+python-service/.DS_store
 Docs/Prompt_1.md
 Docs/Prompt_2.md
+Docs/.DS_store
+.DS_store
