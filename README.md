@@ -20,22 +20,8 @@ cd wiki-summarizer
 ```
 
 ### Set Up Environment Variables
-Copy the environment variable example files and fill in the necessary values:
-```bash
-cp .env.example .env
-cp config/.env.example config/.env
-cp docker-compose.yml.example docker-compose.yml
-```
+Edit the **env** and **docker-compose.yml** files to set up your specific configuration, including Redis and database settings.
 
-Edit the **.env**, **config/.env**, and **docker-compose.yml** files to set up your specific configuration, including Redis and database settings.
-
-### Build and Run Docker Containers
-```bash
-docker-compose build
-docker-compose up -d
-```
-
-# Configuration
 ### Environment Configuration
 Ensure that your **.env** files are correctly configured with the appropriate values for Redis, Laravel, and Python:
 
@@ -54,9 +40,12 @@ cp python-service/.env.example python-service/.env
 cp laravel/.env.example laravel/.env
 ```
 
-### Docker
-Ensure to update the container names as needed, and pointing the nginx conf files to the right ports (if changed)  
-
+### Build and Run Docker Containers
+```bash
+docker-compose build
+docker-compose up -d
+```
+  
 `Note`: You can see an architecture diagram under Docs/
 
 # License
