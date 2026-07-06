@@ -45,8 +45,11 @@ cp laravel/.env.example laravel/.env
 docker-compose build
 docker-compose up -d
 ```
+
+# Website
+If nginx/Docker configuration unchanged, you can load the website at `http://summarizer.local:8080/summarize`
   
-`Note`: You can see an architecture diagram under Docs/
+`Note`: You can see an architecture diagram under Docs/system_architecture.svg
 
 # License
 This project is licensed under the MIT License. Feel free to use, modify, and distribute it as needed.
