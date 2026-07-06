@@ -1,0 +1,116 @@
+/* Custom Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --font-sans: 'Inter', sans-serif;
+
+    --color-bg: #e9f0f7;         
+    --color-primary: #1d4ed8;    
+    --color-primary-hover: #1e40af; 
+    --color-divider: #ccdce7;
+    --color: #486077;
+}
+
+/* Keep layout overrides in base */
+@layer base {
+    html {
+        font-family: var(--font-sans); 
+        background: linear-gradient(to bottom, var(--color-bg), #ffffff); 
+        color: #111827;
+    }
+
+    .main-layout {
+        @apply min-h-screen flex flex-col max-w-6xl w-full mx-auto px-6;
+    }
+
+    .nav-bar { 
+        @apply w-full flex items-center justify-between mt-6 mb-2;
+    }
+
+    .navbar-brand {
+        @apply flex items-center h-full transition duration-200;
+    }
+
+    .navbar-brand a {
+        @apply flex items-center gap-3;
+    }
+    
+    .navbar-brand:hover {
+        @apply opacity-80; 
+    }
+
+    .nav-logo {
+        @apply h-12 w-auto object-contain;
+    }
+
+    .nav-link {
+        @apply text-base font-medium text-gray-600 transition-all duration-200 pt-2 pb-3 px-1;
+        border-top: 3px solid transparent;
+    }
+
+    .nav-link:hover:not(.active) {
+        @apply text-gray-400;
+        border-top-color: theme('colors.sky.300');
+    }
+
+    .nav-link.active {
+        @apply text-gray-800 font-semibold;
+        border-top-color: theme('colors.sky.500');
+    }
+
+    .main-content {
+        @apply flex-1 w-full pt-10 pb-28 px-6;
+    }
+
+    .footer {
+        @apply w-full text-center py-6 text-sm text-gray-500 border-t border-gray-100;
+    }
+}
+
+/* components (have higher selector priority) */
+@layer components {
+    /* ─── BUTTONS ─── */
+    .btn-primary {
+        @apply px-5 py-2.5 rounded-full text-sm font-medium text-white shadow-sm transition-all duration-200 cursor-pointer;
+        background-color: #0ea5e9;
+    }
+    
+    .btn-primary:hover {
+        background-color: var(--color-primary-hover);
+        @apply shadow-md transform -translate-y-0.5;
+    }
+
+    .title {
+        @apply text-xl tracking-tight pt-4 mb-8 text-gray-600 border-t;
+    }
+
+    /* ─── FORMS ─── */
+    .form-label {
+        @apply text-base tracking-wider text-gray-500;
+    }
+
+    .form-input {
+        @apply rounded-md text-gray-700 shadow-sm p-3 bg-[#f3f4f6] border border-gray-200;
+        
+        /* Remove the browser outline and Tailwind's focus ring */
+        @apply focus:outline-none focus:ring-0 focus:border-gray-200;
+    }
+
+    .form-textarea {
+        @apply text-gray-700 rounded-md shadow-sm p-3 bg-[#f3f4f6] border border-gray-200 outline-none min-h-[120px];
+
+        @apply focus:outline-none focus:ring-0 focus:border-gray-200;
+    }
+
+    .alerts {
+        @apply mb-6
+    }
+
+    .alert-success {
+        @apply top-4 right-4 z-50 bg-green-700 text-white p-4 rounded-lg shadow-md flex items-center space-x-2
+    }
+
+    .alert-error {
+        @apply top-4 right-4 z-50 bg-red-700 text-white p-4 rounded-lg shadow-md flex items-center space-x-2
+    }
+}

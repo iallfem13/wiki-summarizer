@@ -1,0 +1,9 @@
+transformers
+redis
+httpx
+sentencepiece
+torch
+python-dotenv
+phpserialize
+watchdog # make changes show up instantly
+accelerate>=0.26.0

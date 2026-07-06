@@ -1,0 +1,7 @@
+.env
+laravel/.env
+laravel/vendor/
+python-service/__pycache__/
+python-service/.venv/
+python-service/.env/
+Docs/*.md
